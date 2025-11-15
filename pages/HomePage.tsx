@@ -388,27 +388,46 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
             
-             {/* Call to Action */}
-            <section
-              className="relative py-20 bg-cover bg-center"
-              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556139943-4bd5623282a2')" }}
-            >
-              <div className="absolute inset-0 bg-cyan-800/80 backdrop-blur-sm"></div>
-              <div className="container mx-auto px-6 relative z-10 text-center text-white">
-                <AnimatedSection>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Elevate Your Hydraulic Systems?</h2>
-                    <p className="max-w-3xl mx-auto mb-8 text-cyan-100">
-                        Partner with SKI HYDRAULIC for reliable, high-performance components tailored to your needs. Contact our experts today for a personalized consultation and quote.
-                    </p>
-                    <Link
-                      to="/contact"
-                      className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-cyan-600 font-bold rounded-lg shadow-lg hover:bg-gray-100 transform hover:-translate-y-0.5 transition-all duration-300"
-                    >
-                      <span>Request a Quote</span>
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </Link>
-                </AnimatedSection>
-              </div>
+            {/* Call to Action */}
+            <section className="py-20 bg-gray-50">
+                <div className="container mx-auto px-6">
+                    <AnimatedSection>
+                        <div className="relative bg-gradient-to-br from-cyan-600 to-gray-800 rounded-2xl shadow-2xl text-white overflow-hidden">
+                            <div className="absolute top-0 right-0 w-64 h-64 -mt-16 -mr-16 bg-cyan-500/10 rounded-full opacity-50" aria-hidden="true"></div>
+                            <div className="absolute bottom-0 left-0 w-48 h-48 -mb-12 -ml-12 bg-white/10 rounded-full opacity-50" aria-hidden="true"></div>
+                            <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center">
+                                <div className="p-8 lg:p-12">
+                                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                                        Ready to Elevate Your Hydraulic Systems?
+                                    </h2>
+                                    <p className="max-w-lg mb-8 text-cyan-100">
+                                        Partner with SKI HYDRAULIC for reliable, high-performance components tailored to your needs. Contact our experts today for a personalized consultation and quote.
+                                    </p>
+                                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                                        <Link
+                                            to="/contact"
+                                            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-cyan-600 font-bold rounded-lg shadow-lg hover:bg-gray-100 transform hover:-translate-y-0.5 transition-all duration-300"
+                                        >
+                                            <span>Request a Quote</span>
+                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                        </Link>
+                                        <Link to="/about" className="text-sm font-semibold text-white hover:text-cyan-200 transition-colors duration-300 border-b-2 border-transparent hover:border-cyan-300 pb-0.5">
+                                            Learn More About Us
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="relative h-64 lg:h-full w-full">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1562259929-b6e34b6b6b7a?q=80&w=1887&auto=format&fit=crop"
+                                        alt="Advanced hydraulic machinery" 
+                                        className="absolute inset-0 w-full h-full object-cover lg:rounded-r-2xl" 
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-800/50 via-transparent to-transparent lg:bg-gradient-to-l lg:from-gray-800/60 lg:via-transparent lg:to-transparent"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </AnimatedSection>
+                </div>
             </section>
 
             <ProductModal product={selectedProduct} onClose={handleCloseModal} />
